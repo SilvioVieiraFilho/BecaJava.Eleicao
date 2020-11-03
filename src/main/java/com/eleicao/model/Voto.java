@@ -13,12 +13,16 @@ public class Voto {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//ID É UM AUTO INCREMENTO
 	private Long Id;
 	
+	
+	
 	@ManyToOne //CRIA FK MUITOS PARA UM
 	@JoinColumn(name="CandidatoId") //CRIA COLUNA PRA FK
 	private Candidato Candidato; //ASSOCIA TIPO DA CLASSE CANDIDATO E ID
 	
+	
+	
 	@ManyToOne //CRIA FK MUITOS PARA UM
-	@JoinColumn(name="EleitorId") //CRIA COLUNA PRA FK
+	@JoinColumn(name="EleitorId") //CRIA COLUNA PRA FKs
 	private Eleitor Eleitor; //ASSOCIA TIPO DA CLASSE
 	
 	
