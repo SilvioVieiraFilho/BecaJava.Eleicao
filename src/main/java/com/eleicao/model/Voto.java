@@ -9,6 +9,11 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Voto {
+	
+	
+
+ 
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)//ID É UM AUTO INCREMENTO
 	private Long Id;
@@ -24,6 +29,57 @@ public class Voto {
 	@ManyToOne //CRIA FK MUITOS PARA UM
 	@JoinColumn(name="EleitorId") //CRIA COLUNA PRA FKs
 	private Eleitor Eleitor; //ASSOCIA TIPO DA CLASSE
+	
+	
+	@ManyToOne
+	 @JoinColumn(name = "ZonaId")
+	 private Zona zona;
+
+
+	public Long getId() {
+		return Id;
+	}
+
+
+	public void setId(Long id) {
+		Id = id;
+	}
+
+
+	public Candidato getCandidato() {
+		return Candidato;
+	}
+
+
+	public void setCandidato(Candidato candidato) {
+		Candidato = candidato;
+	}
+
+
+	public Eleitor getEleitor() {
+		return Eleitor;
+	}
+
+
+	public void setEleitor(Eleitor eleitor) {
+		Eleitor = eleitor;
+	}
+
+
+	public Zona getZona() {
+		return zona;
+	}
+
+
+	public void setZona(Zona zona) {
+		this.zona = zona;
+	}
+	
+	
+	
+	
+	
+	
 	
 	
 

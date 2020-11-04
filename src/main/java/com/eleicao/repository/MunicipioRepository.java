@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 
 import com.eleicao.model.Municipio;
 
-public class MunicipioRepository {
+
 
 	@Repository
-	public interface LivroRepository extends CrudRepository<Municipio, Long> {
+	public interface MunicipioRepository extends CrudRepository<Municipio, Long> {
 
 	}
 
-}
+

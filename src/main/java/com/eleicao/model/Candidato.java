@@ -16,6 +16,10 @@ public class Candidato{
 
 	private String nome;
 	private String Numero;
+	private String Tipo;
+
+	
+	
 	
 	@ManyToOne
 	@JoinColumn(name = "MunicipioId")
@@ -23,6 +27,26 @@ public class Candidato{
      private Municipio Municipio;
 	
 	
+	public String getTipo() {
+		return Tipo;
+	}
+
+	public void setTipo(String tipo) {
+		Tipo = tipo;
+	}
+
+	public Municipio getMunicipio() {
+		return Municipio;
+	}
+
+	public void setMunicipio(Municipio municipio) {
+		Municipio = municipio;
+	}
+
+	public void setNumero(String numero) {
+		Numero = numero;
+	}
+
 	public Long getId() {
 		return id;
 	}

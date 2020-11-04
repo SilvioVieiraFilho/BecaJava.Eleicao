@@ -9,15 +9,21 @@ import org.springframework.data.jdbc.repository.query.Query;
 
 @Entity
 public class Municipio {
-	
-			
-	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long Id;
 
 	private String Nome;
+	private int Populacao;
+
+	public int getPopulacao() {
+		return Populacao;
+	}
+
+	public void setPopulacao(int populacao) {
+		Populacao = populacao;
+	}
 
 	public long getId() {
 		return Id;
