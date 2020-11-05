@@ -13,8 +13,7 @@ public class Zona {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
 	private Long id;
-
-	private String nome;
+    private String nome;
 
 	public Long getId() {
 		return id;
